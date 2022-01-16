@@ -1,3 +1,2 @@
 # totient
-Euler's totient function in C++ vs. Python
-Yeah, thats about it
+Euler's totient function in C++ vs. Python. Yeah, thats about it
