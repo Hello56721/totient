@@ -6,12 +6,18 @@ bool check(int number, int divisor){
     } else {
         return false;
     }
+    
+    // You can replace the entire function body with this if you want, though
+    // this is less obvious.
+    //return !(number % divisor)
 }
 
 bool isRelativePrime(int num1, int num2){
     for (int divisor = 2; divisor < num1 + 1; divisor++){
-        if (check(num1, divisor) == 1){
-            if (check(num2, divisor) == 1){
+        // Checking if the result is 1 is uneccesary, you can simply put it in the if statement
+        if (check(num1, divisor)){
+            // Checking if the result is 1 is uneccesary, you can simply put it in the if statement
+            if (check(num2, divisor)){
                 return false;
             }
         }
@@ -22,7 +28,8 @@ bool isRelativePrime(int num1, int num2){
 int totient(int num1){
     int count = 0;
     for (int num2 = 1; num2 < num1 + 1; num2++){
-        if (isRelativePrime(num1,num2) == 1){
+        // Checking if the result is 1 is uneccesary, you can simply put it in the if statement
+        if (isRelativePrime(num1,num2)){
             count++;
         }
     }
